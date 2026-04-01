@@ -1,0 +1,35 @@
+{
+  "name": "cc-switch-cli",
+  "version": "1.0.0",
+  "description": "Git-branch-based account switcher for Claude CLI and Codex CLI",
+  "type": "module",
+  "bin": {
+    "cc-switch": "dist/bin/cc-switch.js",
+    "claude-switch": "dist/bin/claude-switch.js",
+    "codex-switch": "dist/bin/codex-switch.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "claude",
+    "codex",
+    "cli",
+    "account-switcher"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
