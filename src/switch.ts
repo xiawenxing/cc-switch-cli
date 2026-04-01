@@ -161,11 +161,9 @@ export function cmdSwitch(config: CliConfig, target: string): void {
 
   success(`Switched to ${target}`);
 
-  // Claude proxy management
-  if (config.name === 'claude') {
-    if (target === 'proxy') startCcSwitch();
-    if (cur === 'proxy') stopCcSwitch();
-  }
+  // cc-switch proxy management (both Claude and Codex use the same proxy)
+  if (target === 'proxy') startCcSwitch();
+  if (cur === 'proxy') stopCcSwitch();
 
   console.log(getAuthStatus(config));
 }
