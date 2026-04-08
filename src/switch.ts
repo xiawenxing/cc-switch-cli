@@ -13,13 +13,13 @@ import {
 
 // --- Gitignore templates ---
 
-const CLAUDE_GITIGNORE = `.gitignore
+const CLAUDE_GITIGNORE = `*
 !.gitignore
 !.credentials.json
 !settings.json
 `;
 
-const CODEX_GITIGNORE = `.gitignore
+const CODEX_GITIGNORE = `*
 !.gitignore
 !auth.json
 !config.toml
